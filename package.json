@@ -8,7 +8,9 @@
     "wp": "webpack",
     "build": "npm run wp -- --mode production",
     "wds": "webpack-dev-server",
-    "start": "npm run wds -- --mode development"
+    "api": "node --inspect server.js",
+    "frontend": "npm run wds -- --mode development",
+    "local": "npm run api & npm run frontend"
   },
   "repository": {
     "type": "git",
