@@ -4,12 +4,6 @@ import classnames from 'classnames'
 import TodoTextInput from './TodoTextInput'
 
 export default class TodoItem extends Component {
-  static propTypes = {
-    todo: PropTypes.object.isRequired,
-    deleteTodo: PropTypes.func.isRequired,
-    editTodo: PropTypes.func.isRequired
-  }
-
   state = {
     editing: false
   }
