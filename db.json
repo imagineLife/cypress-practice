@@ -1,0 +1,14 @@
+{
+  "todos": [
+    {
+      "id": 4,
+      "completed": false,
+      "text": "Goodnight moon"
+    },
+    {
+      "id": 7,
+      "completed": true,
+      "text": "water the melons"
+    }
+  ]
+}
