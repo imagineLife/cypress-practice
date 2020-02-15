@@ -6,8 +6,11 @@ describe('APP loads', () => {
 	it('gets first to-do item', () => {
 		cy.visit('/')
 		
-		const firstItem = cy.get('.todo-list li:nth-child(1)')
+		//WITHOUT using data-cy attr
+		// const firstItem = cy.get('.todo-list li:nth-child(1)')
 
+		//USING data-cy attr
+		const firstItem = cy.get('[data-cy=todo-item-8]')
 
 		firstItem.should('have.text', 'juice the box')
 		firstItem.should('not.have.class', 'completed')
