@@ -10,7 +10,9 @@
     "wds": "webpack-dev-server",
     "api": "node --inspect server.js",
     "frontend": "npm run wds -- --mode development",
-    "local": "npm run api & npm run frontend"
+    "local": "npm run api & npm run frontend",
+    "cyrun": "cypress run",
+    "cyo": "cypress open"
   },
   "repository": {
     "type": "git",
