@@ -5,6 +5,10 @@ describe('Validates redux store vals', () => {
     const win = cy.window();
     const store = win.its('store');
     const storeState = store.invoke('getState');
+
+    // show the store in the cypress test window
+    cy.cypressStore;
+
     storeState.should('deep.equal', {
       todos: [
         {
