@@ -26,21 +26,23 @@ const TodoItem = ({deleteTodo, editTodo, todo}) => {
     element = (
       <div className="view">
         <input className="toggle"
-               type="checkbox"
-               checked={todo.completed}
-               onChange={() => {
-                 editTodo(todo.id, { ...todo, completed: !todo.completed })
-               }
-                } />
-        <label onDoubleClick={() => setEditing(true)}>
+           type="checkbox"
+           checked={todo.completed}
+           onChange={() => {
+             editTodo(todo.id, { ...todo, completed: !todo.completed })
+           }
+            } />
+        <label 
+          onDoubleClick={() => setEditing(true)}>
           {todo.text}
         </label>
-        <button className="destroy"
-                onClick={() => deleteTodo(todo.id)} />
+        <button 
+          className="destroy"
+          onClick={() => deleteTodo(todo.id)} />
       </div>
     )
   }
-
+  
   return (
     <li data-cy={`todo-item-${todo.id}`} className={classnames({
       completed: todo.completed,
