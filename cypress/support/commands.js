@@ -23,3 +23,13 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+
+
+/*
+	save the redux-store from window.store
+	TO
+	cypressStore variable
+*/
+Cypress.Commands.add('cypressStore', () => {
+  cy.window().its('store').invoke('getState');
+});
