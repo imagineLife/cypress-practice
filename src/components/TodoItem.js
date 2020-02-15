@@ -42,7 +42,7 @@ const TodoItem = ({deleteTodo, editTodo, todo}) => {
   }
 
   return (
-    <li className={classnames({
+    <li data-cy={`todo-item-${todo.id}`} className={classnames({
       completed: todo.completed,
       editing
     })}>
