@@ -19,14 +19,16 @@ describe('APP loads', () => {
 	it('first check-box is NOT checked', () => {
 		cy.visit('/')
 		
-		const firstCheckBox = cy.get('.todo-list li:nth-child(1) .toggle')
+		// const firstCheckBox = cy.get('.todo-list li:nth-child(1) .toggle')
+		const firstCheckBox = cy.get('[data-cy=todo-item-8] .toggle')
 		firstCheckBox.should('not.be.checked')
 	})
 
 	it('second check-box IS checked', () => {
 		cy.visit('/')
 		
-		const firstCheckBox = cy.get('.todo-list li:nth-child(2) .toggle')
-		firstCheckBox.should('be.checked')
+		// const secondCheckBox = cy.get('.todo-list li:nth-child(2) .toggle')
+		const secondCheckBox = cy.get('[data-cy=todo-item-9] .toggle')
+		secondCheckBox.should('be.checked')
 	})
 })
