@@ -22,7 +22,7 @@ describe('APP loads', () => {
 		firstItem.should('not.have.class', 'completed')
 
 		//Debugging again!
-		firstItem.debug()
+		// firstItem.debug()
 	})
 
 	it('first check-box is NOT checked', () => {
