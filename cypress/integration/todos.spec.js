@@ -12,7 +12,13 @@ describe('APP loads', () => {
 		//USING data-cy attr
 		const firstItem = cy.get('[data-cy=todo-item-8]')
 
-		firstItem.should('have.text', 'juice the box')
+		let myVar = 'stringVal'
+		let numVar = 9;
+		firstItem
+			//DEBUGGING
+			// .then(e => {debugger;})
+
+			.should('have.text', 'juice the box')
 		firstItem.should('not.have.class', 'completed')
 	})
 
@@ -32,3 +38,13 @@ describe('APP loads', () => {
 		secondCheckBox.should('be.checked')
 	})
 })
+
+/*
+	CYPRESS PROCESS OVERVIEW
+	cypres doesnt visit on vist,
+	instead it sort of PUSHES events into an array
+	[visit, get, should....]
+
+	DEBUGGING
+		introduce the .then() && a js debug instance will be present
+*/
