@@ -20,6 +20,9 @@ describe('APP loads', () => {
 
 			.should('have.text', 'juice the box')
 		firstItem.should('not.have.class', 'completed')
+
+		//Debugging again!
+		firstItem.debug()
 	})
 
 	it('first check-box is NOT checked', () => {
@@ -46,5 +49,15 @@ describe('APP loads', () => {
 	[visit, get, should....]
 
 	DEBUGGING
-		introduce the .then() && a js debug instance will be present
+		- introduce the .then() && a js debug instance will be present
+		- item.debug() outputs some nice details in the console...
+			- command name (should)
+			- command args ([not.have.class, completed])
+			- current Subject
+				[
+					li,
+					length: 1,
+					prevObject : jQuery-selected element...
+					selector: "[data-cy=todo-item=8]"
+				]
 */
