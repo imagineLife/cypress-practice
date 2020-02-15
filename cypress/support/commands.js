@@ -30,6 +30,7 @@
 	TO
 	cypressStore variable
 */
-Cypress.Commands.add('cypressStore', () => {
-  cy.window().its('store').invoke('getState');
+Cypress.Commands.add('cypressStore', (str = '') => {
+  const log = Cypress.log({ name: 'cypressStore' });
+  return cy.window().its('store').invoke('getState');
 });
