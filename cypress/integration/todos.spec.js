@@ -12,8 +12,6 @@ describe('APP loads', () => {
     // USING data-cy attr
     const firstItem = cy.get('[data-cy=todo-item-8]');
 
-    const myVar = 'stringVal';
-    const numVar = 9;
     firstItem
     // DEBUGGING
     // .then(e => {debugger;})
