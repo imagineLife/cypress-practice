@@ -42,6 +42,7 @@ describe('stubs /api/todos', () => {
 
     cy.visit('/');
 
+    // WAIT for the mock-todos to load
     cy.wait('@mock-todos');
 
     const firstItem = cy.get('[data-cy=todo-item-8]');
