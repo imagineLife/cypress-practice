@@ -14,11 +14,14 @@ describe('Validates redux store vals', () => {
     // access properties on window using its
     // https://docs.cypress.io/api/commands/its.html#Syntax
     const store = win.its('store');
+
+    // get state of the store
     const storeState = store.invoke('getState');
 
     // show the store in the cypress test window
     cy.cypressStore;
 
+    // this assures that the to-dos have loaded into the store
     storeState.should('deep.equal', {
       todos: [
         {
