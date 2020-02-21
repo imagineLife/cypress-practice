@@ -1,9 +1,9 @@
 describe('stubs /api/todos', () => {
   it('has stubbed txt', () => {
     /*
-		https://docs.cypress.io/api/commands/server.html
-		"...start a server to begin routing responses to
+		"...start a MOCK server to begin routing responses to
 			cy.route && to change the behavior of network requests"
+      https://docs.cypress.io/api/commands/server.html
 		*/
     cy.server();
 
