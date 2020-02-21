@@ -29,8 +29,20 @@
 	save the redux-store from window.store
 	TO
 	cypressStore variable
+
+	this is a parent arguement
+	the 'cypressStore' is the NAME of the store
+	that is attached to the window
+
 */
 Cypress.Commands.add('cypressStore', (str = '') => {
+  /*
+		Logs JUST the store content in the cypres runner
+  */
   const log = Cypress.log({ name: 'cypressStore' });
-  return cy.window().its('store').invoke('getState');
+
+  // log:false supresses logs of the window
+  return cy
+  	.window({ log: false })
+  	.its('store').invoke('getState');
 });
